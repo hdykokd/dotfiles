@@ -31,6 +31,7 @@ set autoread
 set nobackup
 set noswapfile
 set backspace=indent,eol,start
+set autoindent
 set clipboard=unnamed,autoselect
 
 set splitbelow

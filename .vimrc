@@ -79,6 +79,16 @@ let g:ale_linters = {
 \    'javascript': ['eslint'],
 \}
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-markdown'
+Plug 'kannokanno/previm'
+Plug 'tyru/open-browser.vim'
+autocmd BufRead,BufNewFile *.mkd  set filetype=markdown
+autocmd BufRead,BufNewFile *.md  set filetype=markdown
+" Need: kannokanno/previm
+nnoremap <silent> <C-m><C-p> :PrevimOpen<CR>
+" 自動で折りたたまないようにする
+let g:vim_markdown_folding_disabled=1
+let g:previm_enable_realtime = 1
 
 call plug#end()
 

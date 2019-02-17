@@ -1,6 +1,3 @@
-" install plug.vim
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 set shell=/bin/sh
 
 language en_US.UTF-8
@@ -11,8 +8,8 @@ set background=dark
 
 colorscheme default 
 set ts=2 sw=2 et
-set encoding=utf-8
-set fenc=utf-8
+set encoding=utf8
+set fenc=utf8
 set number
 set paste
 set ruler
@@ -41,6 +38,7 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes for comment
 
+Plug 'ryanoasis/vim-devicons'
 Plug 'dag/vim-fish'
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdtree'
@@ -52,10 +50,13 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme = 'wombat'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#whitespace#enabled = 1
+let g:airline_powerline_fonts = 1
+nmap <C-[> <Plug>AirlineSelectPrevTab
+nmap <C-]> <Plug>AirlineSelectNextTab
 Plug 'alvan/vim-closetag'
 let g:closetag_filenames = '*.html,*.vue'
-Plug 'ryanoasis/vim-devicons'
 Plug 'kien/ctrlp.vim'
 Plug 'thinca/vim-quickrun'
 Plug 'pangloss/vim-javascript'
@@ -86,7 +87,6 @@ autocmd BufRead,BufNewFile *.mkd  set filetype=markdown
 autocmd BufRead,BufNewFile *.md  set filetype=markdown
 " Need: kannokanno/previm
 nnoremap <silent> <C-m><C-p> :PrevimOpen<CR>
-" 自動で折りたたまないようにする
 let g:vim_markdown_folding_disabled=1
 let g:previm_enable_realtime = 1
 

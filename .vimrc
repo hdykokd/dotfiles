@@ -38,7 +38,11 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes for comment
 
+" install nerd-font
+"   - brew tap caskroom/fonts
+"   - brew cask install font-hack-nerd-font
 Plug 'ryanoasis/vim-devicons'
+
 Plug 'dag/vim-fish'
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdtree'
